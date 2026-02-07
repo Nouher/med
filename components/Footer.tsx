@@ -1,12 +1,13 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useLanguage } from './LanguageContext';
+
+
 import { Mail, Phone, MapPin, Linkedin, Facebook } from 'lucide-react';
-import Logo from './Logo';
+import Link from 'next/link';
+
 
 const Footer: React.FC = () => {
-  const { language, t } = useLanguage();
+
 
   return (
     <footer className="bg-brand-charcoal text-white pt-16 pb-8 border-t-8 border-brand-gold">
@@ -14,11 +15,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <Link to="/" className="inline-block mb-6">
-              <Logo variant="footer" />
+            <Link href="/" className="inline-block mb-6">
+             MED LOGO
             </Link>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              {t('footer_tagline')}
+              desc footer
             </p>
             
             <div className="flex gap-4">
@@ -33,12 +34,12 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-6 uppercase tracking-wider text-brand-gold">{language === 'fr' ? 'Navigation' : 'Explore'}</h3>
+            <h3 className="font-bold text-lg mb-6 uppercase tracking-wider text-brand-gold">Explore</h3>
             <ul className="space-y-4">
-              <li><Link to="/" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">{language === 'fr' ? 'Accueil' : 'Home'}</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">Services</Link></li>
-              <li><Link to="/projects" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">{language === 'fr' ? 'Projets' : 'Projects'}</Link></li>
-              <li><Link to="/about" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">{language === 'fr' ? 'À propos' : 'About'}</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">Home</Link></li>
+              <li><Link href="/services" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">Services</Link></li>
+              <li><Link href="/projects" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">Projects</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-brand-gold text-sm transition-colors">About</Link></li>
             </ul>
           </div>
 
@@ -46,10 +47,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-bold text-lg mb-6 uppercase tracking-wider text-brand-gold">Expertise</h3>
             <ul className="space-y-4">
-              <li className="text-gray-400 text-sm">{language === 'fr' ? 'Montage Industriel' : 'Industrial Assembly'}</li>
-              <li className="text-gray-400 text-sm">{language === 'fr' ? 'Charpente Métallique' : 'Steel Framework'}</li>
-              <li className="text-gray-400 text-sm">{language === 'fr' ? 'Chaudronnerie & Silos' : 'Boilermaking & Silos'}</li>
-              <li className="text-gray-400 text-sm">{language === 'fr' ? 'Maintenance de Site' : 'Site Maintenance'}</li>
+              <li className="text-gray-400 text-sm">Industrial Assembly</li>
+              <li className="text-gray-400 text-sm">Steel Framework</li>
+              <li className="text-gray-400 text-sm">Boilermaking & Silos</li>
+              <li className="text-gray-400 text-sm">Site Maintenance</li>
             </ul>
           </div>
 
