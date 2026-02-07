@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
+import Header from "@/components/header";
+import { Manrope } from 'next/font/google'
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['300','400','500','600','700','800'], // choose the weights you need
+  variable: '--font-manrope', // optional for Tailwind
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.variable} ${manrope.variable} antialiased`}
       >
+        <Header/>
         {children}
       </body>
     </html>
