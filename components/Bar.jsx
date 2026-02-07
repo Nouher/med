@@ -1,5 +1,4 @@
-import { Facebook, Instagram, Linkedin, LinkedinIcon, Mail, Phone, Twitter } from 'lucide-react'
-import React from 'react'
+import { Facebook, Instagram, LinkedinIcon, Mail, Phone, Twitter } from 'lucide-react'
 import { Separator } from './ui/separator'
 
 export default function Bar() {

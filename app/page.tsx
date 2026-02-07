@@ -1,6 +1,6 @@
 import Button from "@/components/Button";
 import { Separator } from "@/components/ui/separator";
-import { Check, ChevronRight, Medal, MoveRight, Play } from "lucide-react";
+import { Check, ChevronRight, Medal, MoveRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
